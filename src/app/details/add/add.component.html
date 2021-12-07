@@ -1,0 +1,44 @@
+<button (click)="addUser()" type="button" class="btn btn-success" >
+  + Add User
+</button>
+
+
+<div
+class="modal"
+tabindex="-1"
+role="dialog"
+[ngStyle]="{'display':displayStyle}">
+<div class="modal-dialog" role="document">
+  <div  [formGroup]="users" class="modal-content">
+    <div class="modal-header">
+      <h4 class="modal-title">Add User</h4>
+    </div>
+    <div class="modal-body">
+      <div class="mb-3">
+        <label for="name1" class="form-label"><h6>Name</h6></label>
+        <input type="text" class="form-control" formControlName="title" id="name1">
+      </div>
+      <div class="mb-3">
+          <label for="desc1" class="form-label"><h6>Description</h6></label>
+          <input type="text" class="form-control" formControlName="description" id="desc1">
+      </div>
+
+    </div>
+    <div class="modal-footer">
+      <button type="submit" (click)="onSubmit()" class="btn btn-primary">Submit</button>
+          <button type="button" class="btn btn-light" 
+              (click)="closePopup()">
+        Close
+      </button>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+<!-- <h2 class="m-5"> Insert User </h2> -->
+

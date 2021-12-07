@@ -1,0 +1,13 @@
+button {
+  padding: 10px;
+  margin: 20px;
+}
+
+.header {
+  height: 80px;
+  background-color: rgb(94, 92, 92);
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  padding: 20px;
+}

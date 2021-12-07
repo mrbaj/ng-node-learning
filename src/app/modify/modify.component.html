@@ -1,0 +1,40 @@
+<!-- <button class="btn btn-light" >✏️</button> -->
+
+<!-- Button trigger modal -->
+<button (click)="editUser()" type="button" class="btn btn-light" >
+    ✏️
+  </button>
+
+  <div
+  class="modal"
+  tabindex="-1"
+  role="dialog"
+  [ngStyle]="{'display':displayStyle}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Edit Details</h4>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+            <label [for]="title" class="form-label">Name</label>
+            <input type="text" class="form-control" [(ngModel)]="title" [id]="title">
+          </div>
+          <div class="mb-3">
+            <label [for]="description" class="form-label">Description</label>
+            <input type="text" class="form-control" [(ngModel)]="description" [id]="description">
+           </div>
+  
+      </div>
+      <div class="modal-footer">
+            <button type="button" class="btn btn-primary" 
+                (click)="save()">          Save
+            </button>
+            <button type="button" class="btn btn-light" 
+                (click)="closePopup()">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
